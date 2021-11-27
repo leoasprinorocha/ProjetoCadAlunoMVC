@@ -12,7 +12,11 @@ namespace ProjetoCadAluno.DOMAIN.Models
         public string Nome { get; set; }
         public string Telefone { get; set; }
         public SituacaoAluno Situacao { get; set; }
-        public string Matricula { get; set; }
+        public int Matricula { get; set; }
+        public DateTime DataRegistroAluno { get; set; }
+        public DateTime DataUltimaAtualizacao { get; set; }
+
+
 
         
     }

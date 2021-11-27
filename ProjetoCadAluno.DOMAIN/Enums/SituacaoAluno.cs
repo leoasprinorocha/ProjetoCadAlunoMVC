@@ -10,6 +10,6 @@ namespace ProjetoCadAluno.DOMAIN.Enums
     {
         Aprovado = 1,
         Reprovado = 2,
-        EmRecuperacao = 3
+        Recuperacao = 3
     }
 }

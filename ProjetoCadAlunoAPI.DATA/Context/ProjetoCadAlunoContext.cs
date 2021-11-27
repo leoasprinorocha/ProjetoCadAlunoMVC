@@ -15,13 +15,10 @@ namespace ProjetoCadAlunoAPI.DATA.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(
-    Assembly.GetExecutingAssembly(),
-    t => t.GetInterfaces().Any(i =>
-                i.IsGenericType &&
-                i.GetGenericTypeDefinition() == typeof(IEntityTypeConfiguration<>) &&
-                typeof(BaseMapConfig).IsAssignableFrom(i.GenericTypeArguments[0]))
-);
+            modelBuilder.ApplyConfiguration(new AlunoMap());
+            
+            
+
 
         }
     }

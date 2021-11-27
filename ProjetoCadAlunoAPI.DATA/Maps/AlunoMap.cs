@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoCadAlunoAPI.DATA.Maps
 {
-    public class AlunoMap : BaseMapConfig, IEntityTypeConfiguration<Aluno>
+    public class AlunoMap : IEntityTypeConfiguration<Aluno>
     {
 
         public void Configure(EntityTypeBuilder<Aluno> builder)

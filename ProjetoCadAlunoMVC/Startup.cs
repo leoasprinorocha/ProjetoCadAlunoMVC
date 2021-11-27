@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProjetoCadAlunoAPI.Configuration;
 using ProjetoCadAlunoMVC.Configuration;
 using System;
 using System.Collections.Generic;
@@ -26,8 +27,11 @@ namespace ProjetoCadAlunoMVC
         {
             services.AddControllersWithViews();
             services.AddHttpClient();
-            services.AddHelperServices();
-            
+            services.AddIoCDependencies();
+
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +58,7 @@ namespace ProjetoCadAlunoMVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Aluno}/{action=Home}/{id?}");
             });
         }
     }

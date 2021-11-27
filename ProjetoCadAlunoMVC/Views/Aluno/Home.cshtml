@@ -1,0 +1,72 @@
+﻿@using ProjetoCadAluno.DOMAIN.Enums
+
+@{
+    var listSit = (IEnumerable<object>)TempData["ddlSitAluno"];
+
+}
+
+
+
+<div class="container rounded pt-3 pb-3 shadow-sm col-md-8" style="font-size: 0.775rem">
+
+    <div class="col-xl-12 row">
+        <label class="text-primary small font-weight-bold" id="idUserSalvo">IDENTIFICAÇÃO DOS ALUNOS</label>
+        @Html.TextBox("txtBuscaAluno", "", new { @class = "form-control form-control-sm col-10", placeholder = "BUSQUE PELO NOME DO ALUNO" })
+        <i class="fa fa-plus ml-5 text-primary" id="btnAdicionarAluno" style="font-size:30px" title="Adicionar aluno"></i>
+    </div>
+
+</div>
+
+
+
+
+@*modal de adicionar aluno*@
+<div id="modalAdicionarAluno" class="modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div id="divModalInformacoes" class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModal">CADASTRO ALUNO</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div id="MensagemModalBody" class="modal-body">
+                <div class="col-12 col-sm-12 form-group">
+                    <label class="font-weight-bold">Nome aluno</label>
+                    <input class="form-group col-12 col-sm-12 validaCliente" id="txtNomeCliente" />
+                </div>
+
+                <div class="col-12 col-sm-12 form-group">
+                    <label class="font-weight-bold">Telefone aluno</label>
+                    <input class="form-group col-12 col-sm-12 mask-telefone" id="txtTelefoneAluno" />
+                </div>
+
+
+
+                <div class="col-12 col-sm-12 form-group">
+                    <label class="font-weight-bold">Situação aluno</label>
+                    @Html.DropDownList("sitSelec", new SelectList(listSit, "Value", "Name"), new { @class = "form-control form-control-sm text-secondary validaCliente" })
+                </div>
+
+
+                <br />
+                <br />
+
+            </div>
+            <div id="ModalMensagemFooter" class="modal-footer">
+                <button type="button" id="btCancelar" class="btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btnSaveCliente" class="btn-success">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts{
+
+<script src="~/js/Application/Aluno/Aluno.js"></script>
+
+
+}
