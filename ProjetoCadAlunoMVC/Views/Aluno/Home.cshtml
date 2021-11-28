@@ -17,12 +17,13 @@
 
 </div>
 
-
+<div class="container rounded pt-3 pb-3 shadow-sm col-md-8" style="font-size: 0.775rem; display: none" id="gridAlunos">
+</div>
 
 
 @*modal de adicionar aluno*@
-<div id="modalAdicionarAluno" class="modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
-    <div id="divModalInformacoes" class="modal-dialog modal-lg" role="document">
+<div id="modalAdicionarAluno" class="modal col-12" data-backdrop="static" data-keyboard="false" role="dialog">
+    <div id="divModalInformacoes" class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="TituloModal">CADASTRO ALUNO</h5>
@@ -34,7 +35,12 @@
             <div id="MensagemModalBody" class="modal-body">
                 <div class="col-12 col-sm-12 form-group">
                     <label class="font-weight-bold">Nome aluno</label>
-                    <input class="form-group col-12 col-sm-12 validaCliente" id="txtNomeCliente" />
+                    <input class="form-group col-12 col-sm-12" id="txtNomeAluno" />
+                </div>
+
+                <div class="col-12 col-sm-12 form-group">
+                    <label class="font-weight-bold">CPF aluno</label>
+                    <input class="form-group col-12 col-sm-12" id="txtCpfAluno" />
                 </div>
 
                 <div class="col-12 col-sm-12 form-group">
@@ -56,7 +62,7 @@
             </div>
             <div id="ModalMensagemFooter" class="modal-footer">
                 <button type="button" id="btCancelar" class="btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" id="btnSaveCliente" class="btn-success">Salvar</button>
+                <button type="button" id="btnSaveAluno" class="btn-success">Salvar</button>
             </div>
         </div>
     </div>
@@ -66,6 +72,8 @@
 
 @section Scripts{
 
+<script src="~/js/Uteis/Uteis.js"></script>
+<script src="~/js/Uteis/datatables-1.10.20.js"></script>
 <script src="~/js/Application/Aluno/Aluno.js"></script>
 
 

@@ -12,7 +12,6 @@
   <ItemGroup>
     <ProjectReference Include="..\ProjetoCadAluno.CLIENT\ProjetoCadAluno.CLIENT.csproj" />
     <ProjectReference Include="..\ProjetoCadAluno.DOMAIN\ProjetoCadAluno.DOMAIN.csproj" />
-    <ProjectReference Include="..\ProjetoCadAlunoAPI\ProjetoCadAlunoAPI.csproj" />
   </ItemGroup>
 
 </Project>

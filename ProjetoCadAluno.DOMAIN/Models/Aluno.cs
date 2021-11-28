@@ -1,9 +1,6 @@
 ﻿using ProjetoCadAluno.DOMAIN.Enums;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ProjetoCadAluno.DOMAIN.Models
 {
@@ -13,11 +10,12 @@ namespace ProjetoCadAluno.DOMAIN.Models
         public string Telefone { get; set; }
         public SituacaoAluno Situacao { get; set; }
         public int Matricula { get; set; }
+        public string CpfAluno { get; set; }
         public DateTime DataRegistroAluno { get; set; }
         public DateTime DataUltimaAtualizacao { get; set; }
 
 
 
-        
+
     }
 }

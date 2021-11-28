@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ProjetoCadAlunoAPI.Configuration;
 using ProjetoCadAlunoMVC.Configuration;
 using System;
 using System.Collections.Generic;
@@ -26,11 +25,9 @@ namespace ProjetoCadAlunoMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddHelperServices();
             services.AddHttpClient();
-            services.AddIoCDependencies();
-
-
-
+            
 
         }
 

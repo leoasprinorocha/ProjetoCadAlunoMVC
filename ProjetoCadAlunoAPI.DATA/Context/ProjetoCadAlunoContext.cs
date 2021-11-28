@@ -17,8 +17,6 @@ namespace ProjetoCadAlunoAPI.DATA.Context
         {
             modelBuilder.ApplyConfiguration(new AlunoMap());
             
-            
-
 
         }
     }

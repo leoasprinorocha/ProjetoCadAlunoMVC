@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ProjetoCadAlunoAPI.BUSINESS\ProjetoCadAlunoAPI.BUSINESS.csproj" />
     <ProjectReference Include="..\ProjetoCadAlunoAPI.DATA\ProjetoCadAlunoAPI.DATA.csproj" />
   </ItemGroup>
 

@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ProjetoCadAlunoAPI.Configuration;
 using ProjetoCadAlunoAPI.DATA.Context;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,9 @@ namespace ProjetoCadAlunoAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+            
+           
+
             string mySqlConnection = Configuration.GetConnectionString("DefaultConnection");
 
             services.AddDbContextPool<ProjetoCadAlunoContext>(options => options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection), b => b.MigrationsAssembly("ProjetoCadAlunoAPI")));
@@ -38,6 +42,9 @@ namespace ProjetoCadAlunoAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjetoCadAlunoAPI", Version = "v1" });
             });
+
+            services.AddIoCDependencies();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoCadAlunoAPI.DATA.Interfaces
+namespace ProjetoCadAluno.DOMAIN.Interfaces.Repositories
 {
-    public interface IPersistencia
+    public interface IAlunoRepository
     {
         List<Aluno> ListarAlunos();
         Aluno CadastrarAluno(Aluno aluno);

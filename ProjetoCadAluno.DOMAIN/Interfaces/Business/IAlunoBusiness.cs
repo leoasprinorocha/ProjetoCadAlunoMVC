@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoCadAlunoAPI.BUSINESS.InterfacesBusiness
+namespace ProjetoCadAluno.DOMAIN.Interfaces.Business
 {
     public interface IAlunoBusiness
     {

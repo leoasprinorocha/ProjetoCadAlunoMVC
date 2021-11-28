@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoCadAlunoAPI.DATA.Context;
 
 namespace ProjetoCadAlunoAPI.Migrations
 {
     [DbContext(typeof(ProjetoCadAlunoContext))]
-    partial class ProjetoCadAlunoContextModelSnapshot : ModelSnapshot
+    [Migration("20211127122859_addcpf")]
+    partial class addcpf
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

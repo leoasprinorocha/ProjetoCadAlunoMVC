@@ -1,0 +1,135 @@
+﻿@using ProjetoCadAluno.DOMAIN.Models;
+
+@{
+
+
+}
+
+@model IEnumerable<Aluno>
+
+
+
+
+<div class="row mt-2">
+
+    <div class="col-sm-12 col-md-12">
+        <table class="table table-sm table-striped" id="tableAluno">
+            <thead>
+                <tr class="small font-weight-bold text-muted">
+                    <td></td>
+                    <td>Matrícula</td>
+                    <td id="txtCliente">Nome</td>
+                    <td>Telefone</td>
+                    <td>CPF</td>
+                    <td>Situação</td>
+                    <td>Data cadastro</td>
+                    <td>Data última atualização</td>
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+
+                @if (Model != null)
+                {
+
+                    foreach (var item in Model)
+                    {
+                        var dataCad = item.DataRegistroAluno.ToString("dd/MM/yyyy");
+                        var dataUltAtua = item.DataUltimaAtualizacao.ToString("dd/MM/yyyy");
+
+
+                        <tr class="small">
+
+
+                            <td>
+
+                                <a id="btnDetalhar" class="detalhar" title="Detalhar" aria-label="Detalhar">
+                                    <img src="~/Images/Detalhar.svg" width="18" height="20">
+                                </a>
+
+                                <a id="btnExcluir" class="detalhar" title="Detalhar" aria-label="Detalhar">
+                                    <img src="~/Images~/Images/Cancelar.svg" width="18" height="20">
+                                </a>
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(Model => item.Matricula)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(Model => item.Nome)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(Model => item.Telefone)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(Model => item.CpfAluno)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(Model => item.Situacao)
+
+                            </td>
+
+                            <td>
+
+                                @dataCad
+
+                            </td>
+
+                            <td>
+
+                                @dataUltAtua
+
+                            </td>
+
+                        </tr>
+                    }
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
